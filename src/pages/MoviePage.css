@@ -1,0 +1,329 @@
+.movie-page {
+  min-height: 100vh;
+  background: #111114;
+  color: #fff;
+}
+
+.movie-page__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 80px;
+}
+
+.movie-page__back {
+  padding: 0;
+  margin-bottom: 28px;
+
+  border: none;
+  background: none;
+
+  color: #8d8d94;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.movie-page__back:hover {
+  color: #fff;
+}
+
+/* HERO */
+
+.movie-hero {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 42px;
+
+  padding-bottom: 48px;
+
+  border-bottom: 1px solid #29292e;
+}
+
+.movie-hero__poster {
+  width: 280px;
+  aspect-ratio: 2 / 3;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #202024;
+}
+
+.movie-hero__poster-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #66666d;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.movie-hero__content {
+  padding-top: 4px;
+}
+
+.movie-hero__header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.movie-hero__header h1 {
+  margin: 0;
+
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.movie-hero__year {
+  color: #77777e;
+  font-size: 18px;
+}
+
+.movie-hero__rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 20px;
+
+  font-size: 20px;
+}
+
+.movie-hero__rating span:first-child {
+  color: #fff;
+}
+
+.movie-hero__rating strong {
+  font-size: 21px;
+}
+
+.movie-hero__rating .rating-max {
+  color: #66666d;
+  font-size: 14px;
+}
+
+.movie-hero__meta {
+  display: flex;
+  gap: 9px;
+
+  margin-top: 10px;
+
+  color: #96969d;
+  font-size: 14px;
+}
+
+.movie-hero__genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 18px;
+}
+
+.movie-hero__genres span {
+  padding: 6px 10px;
+
+  border: 1px solid #303035;
+  border-radius: 6px;
+
+  color: #b4b4ba;
+
+  font-size: 12px;
+}
+
+.movie-hero__description {
+  max-width: 720px;
+  margin-top: 30px;
+}
+
+.movie-hero__description h2,
+.movie-section h2 {
+  margin: 0 0 12px;
+
+  font-size: 20px;
+}
+
+.movie-hero__description p {
+  margin: 0;
+
+  color: #aaaab1;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.movie-hero__actions {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 28px;
+}
+
+.button {
+  padding: 11px 18px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button--primary {
+  border: none;
+
+  background: #fff;
+  color: #111;
+}
+
+.button--primary:hover {
+  background: #e5e5e5;
+}
+
+.button--secondary {
+  border: 1px solid #38383e;
+
+  background: #202024;
+  color: #fff;
+}
+
+.button--secondary:hover {
+  background: #29292e;
+}
+
+/* INFORMATION */
+
+.movie-section {
+  padding: 36px 0;
+
+  border-bottom: 1px solid #29292e;
+}
+
+.movie-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 40px;
+}
+
+.movie-info__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movie-info__item span {
+  color: #68686f;
+  font-size: 12px;
+}
+
+.movie-info__item strong {
+  color: #d8d8dc;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ACTORS */
+
+.actors-placeholder,
+.similar-placeholder {
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px dashed #303035;
+  border-radius: 8px;
+
+  color: #626269;
+
+  font-size: 14px;
+}
+
+/* TRAILER */
+
+.trailer-placeholder {
+  min-height: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #1b1b1f;
+
+  color: #66666d;
+}
+
+.trailer-placeholder span {
+  font-size: 32px;
+}
+
+.trailer-placeholder p {
+  margin: 10px 0 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .movie-hero {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .movie-hero__poster {
+    width: 200px;
+  }
+
+  .movie-hero__header h1 {
+    font-size: 30px;
+  }
+
+  .movie-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-page__container {
+    padding: 20px 16px 60px;
+  }
+
+  .movie-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-hero__poster {
+    width: 190px;
+  }
+
+  .movie-hero__header h1 {
+    font-size: 28px;
+  }
+
+  .movie-info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trailer-placeholder {
+    min-height: 220px;
+  }
+}
